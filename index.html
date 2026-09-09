@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Особистий веб-сайт Анжеліки Волобуєвої</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. Заголовок сторінки та 2. Меню навігації -->
+    <header>
+        <h1>Особистий веб-сайт Анжеліки Волобуєвої</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#about">Про мене</a></li>
+                <li><a href="#practicals">Практичні роботи</a></li>
+                <li><a href="#labs">Лабораторні заняття</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <!-- 3. Секція "Про мене" -->
+        <section id="about">
+            <h2>Про мене</h2>
+            <img src="images/photo.jpg" alt="Фото Анжеліки Волобуєвої" width="150">
+            <p><strong>ПІБ:</strong> Волобуєва Анжеліка</p>
+            <p><strong>Спеціальність:</strong> Технології цифрового розвитку (2 курс)</p>
+            <p><strong>Університет:</strong> Державний університет інтелектуальних технологій і зв'язку (ДУІКТ)</p>
+            <p><strong>Email:</strong> anjelikakrupol@gmail.com</p>
+        </section>
+
+        <!-- 4. Секція "Практичні роботи" -->
+        <section id="practicals">
+            <h2>Практичні роботи</h2>
+            <ul>
+                <li>
+                    <a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Практичне заняття №1. Основи HTML</a>
+                    <p>Основи HTML: створення семантичної структури персонального сайту та таблиці розкладу занять.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 5. Секція "Лабораторні заняття" -->
+        <section id="labs">
+            <h2>Лабораторні заняття</h2>
+            <ul>
+                <li>
+                    <a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Лабораторне заняття №1. Основи HTML</a>
+                    <p>Перелік лабораторних завдань та посилання на їх виконання у Google Classroom.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Завдання практичної роботи №1: Таблиця з розкладом занять на місяць -->
+        <section id="lab1">
+            <h2>Розклад занять на місяць</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>День / Дата</th>
+                        <th>Пара</th>
+                        <th>Час</th>
+                        <th>Предмет</th>
+                        <th>Тип</th>
+                        <th>Викладач</th>
+                        <th>Формат / Аудиторія</th>
+                        <th>Завдання / Посилання</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Тиждень 07.09 - 13.09 -->
+                    <tr>
+                        <td>П'ятниця (11.09)</td>
+                        <td>4</td>
+                        <td>12:40 - 14:00</td>
+                        <td>Філософія</td>
+                        <td>Сем</td>
+                        <td>Кошетар Уляна Петрівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>Субота (12.09)</td>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Інноваційне підприємництво та управління стартап проектами</td>
+                        <td>Лб</td>
+                        <td>Ганенко Людмила Дмитрівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+
+                    <!-- Тиждень 14.09 - 20.09 -->
+                    <tr>
+                        <td rowspan="2">Понеділок (14.09)</td>
+                        <td>1</td>
+                        <td>08:00 - 09:20</td>
+                        <td>Вища математика</td>
+                        <td>Лк</td>
+                        <td>Білоусова Світлана Вікторівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Українська мова за професійним спрямуванням</td>
+                        <td>Лк</td>
+                        <td>Даниленко Людмила Вікторівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Вівторок (15.09)</td>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Об'єктно-орієнтоване програмування C#</td>
+                        <td>Пз</td>
+                        <td>Гавор Артур Станіславович</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>11:10 - 12:30</td>
+                        <td>Об'єктно-орієнтоване програмування C#</td>
+                        <td>Лб</td>
+                        <td>Гавор Артур Станіславович</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Середа (16.09)</td>
+                        <td>1</td>
+                        <td>08:00 - 09:20</td>
+                        <td>Англійська мова для професійної комунікації</td>
+                        <td>Пз</td>
+                        <td>Непийпа Наталія Дмитрівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Англійська мова для професійної комунікації</td>
+                        <td>Пз</td>
+                        <td>Непийпа Наталія Дмитрівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>11:10 - 12:30</td>
+                        <td>Українська мова за професійним спрямуванням</td>
+                        <td>Лб</td>
+                        <td>Даниленко Людмила Вікторівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>Четвер (17.09)</td>
+                        <td>1</td>
+                        <td>08:00 - 09:20</td>
+                        <td>WEB-технології та WEB-дизайн</td>
+                        <td>Лк</td>
+                        <td>Дзюба Вадим Віталійович</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">П'ятниця (18.09)</td>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Фізичне виховання</td>
+                        <td>Пз</td>
+                        <td>Двірник Віктор Генадійович</td>
+                        <td>Стадіон</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>11:10 - 12:30</td>
+                        <td>Вища математика</td>
+                        <td>Пз</td>
+                        <td>Білоусова Світлана Вікторівна</td>
+                        <td>Ауд. 510</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>12:40 - 14:00</td>
+                        <td>Об'єктно-орієнтоване програмування C#</td>
+                        <td>Пз</td>
+                        <td>Гавор Артур Станіславович</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>Субота (19.09)</td>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Інноваційне підприємництво та управління стартап проектами</td>
+                        <td>Пз</td>
+                        <td>Ганенко Людмила Дмитрівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+
+                    <!-- Тиждень 21.09 - 27.09 -->
+                    <tr>
+                        <td rowspan="4">Понеділок (21.09)</td>
+                        <td>1</td>
+                        <td>08:00 - 09:20</td>
+                        <td>Українська мова за професійним спрямуванням</td>
+                        <td>Пз</td>
+                        <td>Даниленко Людмила Вікторівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Об'єктно-орієнтоване програмування C#</td>
+                        <td>Лк</td>
+                        <td>Гавор Артур Станіславович</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>11:10 - 12:30</td>
+                        <td>Філософія</td>
+                        <td>Лк</td>
+                        <td>Кошетар Уляна Петрівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>12:40 - 14:00</td>
+                        <td>Вища математика</td>
+                        <td>Пз</td>
+                        <td>Білоусова Світлана Вікторівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Середа (23.09)</td>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>WEB-технології та WEB-дизайн</td>
+                        <td>Пз</td>
+                        <td>Дзюба Вадим Віталійович</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>11:10 - 12:30</td>
+                        <td>WEB-технології та WEB-дизайн</td>
+                        <td>Лб</td>
+                        <td>Дзюба Вадим Віталійович</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">П'ятниця (25.09)</td>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Вища математика</td>
+                        <td>Лб</td>
+                        <td>Олімпієва Юлія Ігорівна</td>
+                        <td>Ауд. 517</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>11:10 - 12:30</td>
+                        <td>Вища математика</td>
+                        <td>Пз</td>
+                        <td>Білоусова Світлана Вікторівна</td>
+                        <td>Ауд. 510</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>12:40 - 14:00</td>
+                        <td>Філософія</td>
+                        <td>Сем</td>
+                        <td>Кошетар Уляна Петрівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>Субота (26.09)</td>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Інноваційне підприємництво та управління стартап проектами</td>
+                        <td>Лб</td>
+                        <td>Ганенко Людмила Дмитрівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+
+                    <!-- Тиждень 28.09 - 04.10 -->
+                    <tr>
+                        <td rowspan="2">Понеділок (28.09)</td>
+                        <td>1</td>
+                        <td>08:00 - 09:20</td>
+                        <td>Вища математика</td>
+                        <td>Лк</td>
+                        <td>Білоусова Світлана Вікторівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Українська мова за професійним спрямуванням</td>
+                        <td>Лк</td>
+                        <td>Даниленко Людмила Вікторівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Вівторок (29.09)</td>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Об'єктно-орієнтоване програмування C#</td>
+                        <td>Пз</td>
+                        <td>Гавор Артур Станіславович</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>11:10 - 12:30</td>
+                        <td>Об'єктно-орієнтоване програмування C#</td>
+                        <td>Лб</td>
+                        <td>Гавор Артур Станіславович</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Середа (30.09)</td>
+                        <td>1</td>
+                        <td>08:00 - 09:20</td>
+                        <td>Англійська мова для професійної комунікації</td>
+                        <td>Пз</td>
+                        <td>Непийпа Наталія Дмитрівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Англійська мова для професійної комунікації</td>
+                        <td>Пз</td>
+                        <td>Непийпа Наталія Дмитрівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>11:10 - 12:30</td>
+                        <td>Українська мова за професійним спрямуванням</td>
+                        <td>Лб</td>
+                        <td>Даниленко Людмила Вікторівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>Четвер (01.10)</td>
+                        <td>1</td>
+                        <td>08:00 - 09:20</td>
+                        <td>WEB-технології та WEB-дизайн</td>
+                        <td>Лк</td>
+                        <td>Дзюба Вадим Віталійович</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">П'ятниця (02.10)</td>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Фізичне виховання</td>
+                        <td>Пз</td>
+                        <td>Двірник Віктор Генадійович</td>
+                        <td>Стадіон</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>11:10 - 12:30</td>
+                        <td>Вища математика</td>
+                        <td>Пз</td>
+                        <td>Білоусова Світлана Вікторівна</td>
+                        <td>Ауд. 510</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>12:40 - 14:00</td>
+                        <td>Об'єктно-орієнтоване програмування C#</td>
+                        <td>Пз</td>
+                        <td>Гавор Артур Станіславович</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                    <tr>
+                        <td>Субота (03.10)</td>
+                        <td>2</td>
+                        <td>09:30 - 10:50</td>
+                        <td>Інноваційне підприємництво та управління стартап проектами</td>
+                        <td>Пз</td>
+                        <td>Ганенко Людмила Дмитрівна</td>
+                        <td>Дистанц.</td>
+                        <td><a href="https://classroom.google.com/w/ODc4NDEzMzg3NTE3/t/all" target="_blank">Google Classroom</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- 6. Футер -->
+    <footer>
+        <p>Контакти: anjelikakrupol@gmail.com</p>
+        <p>Роки навчання: 2025–2029</p>
+        <p>
+            <a href="https://github.com/anjelikakrupol-beep" target="_blank">Персональний репозиторій GitHub</a>
+        </p>
+    </footer>
+
+</body>
+</html>
