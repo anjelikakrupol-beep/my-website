@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e3e8ec;
+}
+
+/* Корпус клавиатуры */
+.keyboard {
+    background: #b8bec2;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25), inset 0 2px 4px rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 2px solid #a1a7ac;
+}
+
+/* Стилизация клавиш с объемом и тенями */
+.key {
+    background: #f7f9fa;
+    border: 1px solid #b0b6ba;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #2c3e50;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 0 #959ca1, 0 5px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.08s ease;
+}
+
+/* Эффекты при наведении и нажатии */
+.key:hover {
+    background: #ffffff;
+    box-shadow: 0 4px 0 #848b90, 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.key:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #848b90, 0 2px 3px rgba(0, 0, 0, 0.2);
+    background: #e1e8ed;
+}
+
+.small-text {
+    font-size: 10px;
+}
+
+/* Верхняя строка */
+.f-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.f-row .key {
+    height: 36px;
+    width: 36px;
+}
+
+.f-group {
+    display: flex;
+    gap: 4px;
+}
+
+.nav-cluster-top {
+    display: flex;
+    gap: 4px;
+    margin-left: 10px;
+}
+
+.indicators {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+    font-size: 10px;
+}
+
+.ind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: #88929a;
+    border-radius: 50%;
+}
+
+/* CSS Grid разметка */
+.keyboard-body {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 16px;
+}
+
+.main-block {
+    display: grid;
+    grid-template-columns: repeat(14, 40px);
+    grid-auto-rows: 40px;
+    gap: 6px;
+}
+
+.k-backspace { grid-column: span 2; }
+.k-tab { grid-column: span 1; width: 50px; }
+.k-enter { grid-column: span 2; }
+.k-caps { grid-column: span 2; }
+.k-shift-l { grid-column: span 2; }
+.k-shift-r { grid-column: span 2; }
+.k-space { grid-column: span 6; }
+
+.nav-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 132px;
+}
+
+.nav-six {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-auto-rows: 40px;
+    gap: 6px;
+}
+
+.arrows {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows: repeat(2, 40px);
+    gap: 6px;
+}
+
+.k-up { grid-column: 2; grid-row: 1; }
+.k-left { grid-column: 1; grid-row: 2; }
+.k-down { grid-column: 2; grid-row: 2; }
+.k-right { grid-column: 3; grid-row: 2; }
+
+.num-block {
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    grid-auto-rows: 40px;
+    gap: 6px;
+}
+
+.num-plus { grid-row: span 2; height: 86px; }
+.num-enter { grid-row: span 2; height: 86px; }
+.num-zero { grid-column: span 2; width: 86px; }

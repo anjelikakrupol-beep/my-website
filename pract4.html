@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №4 - Fullsize Keyboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pract4.css">
+</head>
+<body>
+
+    <div class="keyboard">
+        
+        <!-- Верхний ряд F-клавиш -->
+        <div class="f-row">
+            <button class="key k-esc">Esc</button>
+            <div class="f-group">
+                <button class="key">F1</button>
+                <button class="key">F2</button>
+                <button class="key">F3</button>
+                <button class="key">F4</button>
+            </div>
+            <div class="f-group">
+                <button class="key">F5</button>
+                <button class="key">F6</button>
+                <button class="key">F7</button>
+                <button class="key">F8</button>
+            </div>
+            <div class="f-group">
+                <button class="key">F9</button>
+                <button class="key">F10</button>
+                <button class="key">F11</button>
+                <button class="key">F12</button>
+            </div>
+            <div class="nav-cluster-top">
+                <button class="key small-text">Stamp</button>
+                <button class="key small-text">Bloc</button>
+                <button class="key small-text">Pausa</button>
+            </div>
+            <div class="indicators">
+                <div class="ind"><span class="dot"></span>1</div>
+                <div class="ind"><span class="dot"></span>A</div>
+                <div class="ind"><span class="dot"></span>&#8595;</div>
+            </div>
+        </div>
+
+        <!-- Основной корпус клавиатуры (CSS Grid) -->
+        <div class="keyboard-body">
+            
+            <!-- Алфавитно-цифровой блок -->
+            <div class="main-block">
+                <button class="key">|</button>
+                <button class="key">1</button>
+                <button class="key">2</button>
+                <button class="key">3</button>
+                <button class="key">4</button>
+                <button class="key">5</button>
+                <button class="key">6</button>
+                <button class="key">7</button>
+                <button class="key">8</button>
+                <button class="key">9</button>
+                <button class="key">0</button>
+                <button class="key">=</button>
+                <button class="key">?</button>
+                <button class="key k-backspace">&#129120;</button>
+
+                <button class="key k-tab">&#8677;</button>
+                <button class="key">Q</button>
+                <button class="key">W</button>
+                <button class="key">E</button>
+                <button class="key">R</button>
+                <button class="key">T</button>
+                <button class="key">Y</button>
+                <button class="key">U</button>
+                <button class="key">I</button>
+                <button class="key">O</button>
+                <button class="key">P</button>
+                <button class="key">&#233;</button>
+                <button class="key">*</button>
+                <button class="key k-enter">Invio</button>
+
+                <button class="key k-caps">Caps Lock</button>
+                <button class="key">A</button>
+                <button class="key">S</button>
+                <button class="key">D</button>
+                <button class="key">F</button>
+                <button class="key">G</button>
+                <button class="key">H</button>
+                <button class="key">J</button>
+                <button class="key">K</button>
+                <button class="key">L</button>
+                <button class="key">&#231;</button>
+                <button class="key">&#167;</button>
+
+                <button class="key k-shift-l">&#8679;</button>
+                <button class="key">&lt;</button>
+                <button class="key">Z</button>
+                <button class="key">X</button>
+                <button class="key">C</button>
+                <button class="key">V</button>
+                <button class="key">B</button>
+                <button class="key">N</button>
+                <button class="key">M</button>
+                <button class="key">;</button>
+                <button class="key">:</button>
+                <button class="key">-</button>
+                <button class="key k-shift-r">&#8679;</button>
+
+                <button class="key k-ctrl">Ctrl</button>
+                <button class="key k-alt">Alt</button>
+                <button class="key k-space"></button>
+                <button class="key k-altgr">Alt Gr</button>
+                <button class="key k-win">&#8862;</button>
+                <button class="key k-ctrl">Ctrl</button>
+            </div>
+
+            <!-- Блок навигации -->
+            <div class="nav-block">
+                <div class="nav-six">
+                    <button class="key">Ins</button>
+                    <button class="key">&#129125;</button>
+                    <button class="key">Pag&#8593;</button>
+                    <button class="key">Canc</button>
+                    <button class="key">Fine</button>
+                    <button class="key">Pag&#8595;</button>
+                </div>
+                <div class="arrows">
+                    <button class="key k-up">&#8593;</button>
+                    <button class="key k-left">&#8592;</button>
+                    <button class="key k-down">&#8595;</button>
+                    <button class="key k-right">&#8594;</button>
+                </div>
+            </div>
+
+            <!-- Цифровой блок (Numpad) -->
+            <div class="num-block">
+                <button class="key small-text">Bloc Num</button>
+                <button class="key">/</button>
+                <button class="key">*</button>
+                <button class="key">-</button>
+
+                <button class="key">7</button>
+                <button class="key">8</button>
+                <button class="key">9</button>
+                <button class="key num-plus">+</button>
+
+                <button class="key">4</button>
+                <button class="key">5</button>
+                <button class="key">6</button>
+
+                <button class="key">1</button>
+                <button class="key">2</button>
+                <button class="key">3</button>
+                <button class="key num-enter">Invio</button>
+
+                <button class="key num-zero">0</button>
+                <button class="key">,</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
