@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №3 - YouTube Flexbox Layout</title>
+    <link rel="stylesheet" href="pract3.css">
+</head>
+<body>
+
+    <!-- Шапка (Header) -->
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-btn">&#9776;</button>
+            <div class="logo">
+                <span class="logo-icon">&#9654;</span> Premium <sup>UA</sup>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <input type="text" placeholder="Пошук" class="search-input">
+            <button class="search-btn">&#128065;</button>
+            <button class="mic-btn">&#127908;</button>
+        </div>
+
+        <div class="header-right">
+            <button class="icon-btn">&#43;</button>
+            <button class="icon-btn">&#128276;</button>
+            <div class="user-avatar">B</div>
+        </div>
+    </header>
+
+    <!-- Основний контейнер -->
+    <div class="main-container">
+        
+        <!-- Ліва панель -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <a href="#" class="sidebar-item active">Головна</a>
+                <a href="#" class="sidebar-item">YouTube Shorts</a>
+                <a href="#" class="sidebar-item">Підписки</a>
+                <a href="#" class="sidebar-item">YouTube Music</a>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Ви &gt;</div>
+                <a href="#" class="sidebar-item">Ваш канал</a>
+                <a href="#" class="sidebar-item">Історія</a>
+                <a href="#" class="sidebar-item">Ваші відео</a>
+                <a href="#" class="sidebar-item">Переглянути пізніше</a>
+                <a href="#" class="sidebar-item">Завантаження</a>
+                <a href="#" class="sidebar-item">Показати більше</a>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Підписки</div>
+                <a href="#" class="sidebar-item">WAS: Популярна...</a>
+                <a href="#" class="sidebar-item">TheDRZJ</a>
+                <a href="#" class="sidebar-item">ROZETKA</a>
+                <a href="#" class="sidebar-item">Хащі</a>
+                <a href="#" class="sidebar-item">Показати ще 24</a>
+            </div>
+        </aside>
+
+        <!-- Контентна область -->
+        <main class="content">
+            
+            <!-- Панель категорій -->
+            <div class="tags-bar">
+                <button class="tag active">Усі</button>
+                <button class="tag">Ігри</button>
+                <button class="tag">Музика</button>
+                <button class="tag">Пряма трансляція</button>
+                <button class="tag">Новини</button>
+                <button class="tag">Приgodницький бойовик</button>
+                <button class="tag">Образотворчі мистецтва</button>
+                <button class="tag">Мультфільми</button>
+                <button class="tag">Нещодавні завантаження</button>
+                <button class="tag">Ви дивилися</button>
+            </div>
+
+            <!-- Сітка відеокарт -->
+            <section class="video-grid">
+                
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <div class="duration">12:30</div>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-icon">ЕП</div>
+                        <div class="video-info">
+                            <h3 class="video-title">Як збільшився борг України за час великої війни?</h3>
+                            <p class="channel-name">Економічна правда</p>
+                            <p class="video-stats">78 тис. переглядів • 1 місяць тому</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <div class="duration">32:08</div>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-icon">L</div>
+                        <div class="video-info">
+                            <h3 class="video-title">Що Бісить Журналістку | Марія Малевська</h3>
+                            <p class="channel-name">LUKI</p>
+                            <p class="video-stats">70 тис. переглядів • 4 місяці тому</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <div class="duration">26:47</div>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-icon">R</div>
+                        <div class="video-info">
+                            <h3 class="video-title">Какие овощи выращивали предки?</h3>
+                            <p class="channel-name">RTVI Развлечения</p>
+                            <p class="video-stats">276 тис. переглядів • 11 місяців тому</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="thumbnail">
+                        <div class="duration">4:45</div>
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-icon">H</div>
+                        <div class="video-info">
+                            <h3 class="video-title">How to Get Stuff Done When You Have ADHD</h3>
+                            <p class="channel-name">How to ADHD</p>
+                            <p class="video-stats">1,2 млн переглядів • 7 років тому</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Секція Shorts -->
+            <section class="shorts-section">
+                <div class="shorts-header">
+                    <h2><span style="color:red;">&#9830;</span> YouTube Shorts</h2>
+                </div>
+                <div class="shorts-grid">
+                    <div class="short-card">Short 1</div>
+                    <div class="short-card">Short 2</div>
+                    <div class="short-card">Short 3</div>
+                    <div class="short-card">Short 4</div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
+
