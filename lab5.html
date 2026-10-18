@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5 - Home (Макет Figma)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lab5.css">
+</head>
+<body>
+
+    <!-- Обов'язкова зафіксована кнопка-посилання на Figma за вимогою ЛР5 -->
+    <a href="https://www.figma.com/community/file/1013773179233036083" target="_blank" class="figma-fixed">
+        Figma Template
+    </a>
+
+    <!-- Навігація -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#works">Works</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Головний банер (Hero) -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Hi, I am Anjelika,<br>Creative Technologist</h1>
+            <p>Студентка ДУІКТ, спеціальність "Технології цифрового розвитку". Розробляю веб-сайти та інтерфейси з використанням HTML, CSS (Flexbox & Grid).</p>
+            <a href="https://github.com/anjelikakrupol-beep/my-website" target="_blank" class="btn-primary">Download Resume</a>
+        </div>
+        <div class="hero-avatar">
+            <div class="avatar-img"></div>
+        </div>
+    </section>
+
+    <!-- Блок Recent posts -->
+    <section class="recent-posts" id="blog">
+        <div class="container">
+            <div class="posts-header">
+                <h2>Recent posts</h2>
+                <a href="#" class="view-all">View all</a>
+            </div>
+            <div class="posts-grid">
+                <div class="post-card">
+                    <h3>Making a design system from scratch</h3>
+                    <div class="post-meta">12 Feb 2026 <span>|</span> Design, Pattern</div>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+                <div class="post-card">
+                    <h3>Creating pixel perfect icons in Figma</h3>
+                    <div class="post-meta">12 Feb 2026 <span>|</span> Figma, Icon Design</div>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок Featured works -->
+    <section class="featured-works" id="works">
+        <div class="container">
+            <h2 class="section-title">Featured works</h2>
+
+            <div class="work-card">
+                <div class="work-img work-1"></div>
+                <div class="work-details">
+                    <h3><a href="pract3.html">Designing Dashboards (YouTube Layout)</a></h3>
+                    <div class="work-meta">
+                        <span class="badge">2026</span>
+                        <span class="category">Dashboard, Flexbox</span>
+                    </div>
+                    <p>Верстка макета головної сторінки YouTube з використанням технології Flexbox для вирівнювання елементів навігації та сітки відеороликів.</p>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="work-img work-2"></div>
+                <div class="work-details">
+                    <h3><a href="pract4.html">Vibrant Portraits of 2026 (Keyboard Grid)</a></h3>
+                    <div class="work-meta">
+                        <span class="badge">2026</span>
+                        <span class="category">Illustration, CSS Grid</span>
+                    </div>
+                    <p>Розробка повнорозмірної клавіатури з об'ємними 3D-клавішами та складною розкладкою на базі CSS Grid.</p>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="work-img work-3"></div>
+                <div class="work-details">
+                    <h3><a href="lab4.html">36 Days of Malayalam type (Planner Grid)</a></h3>
+                    <div class="work-meta">
+                        <span class="badge">2026</span>
+                        <span class="category">Typography, Planner</span>
+                    </div>
+                    <p>Створення інтерактивної сторінки тижневого планера з чекбоксами, кастомними шрифтами та адаптивною сіткою Grid.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Підвал (Footer) -->
+    <footer class="footer" id="contact">
+        <div class="socials">
+            <a href="#">fb</a>
+            <a href="#">insta</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+        <p class="copyright">Copyright ©2026 All rights reserved</p>
+    </footer>
+
+</body>
+</html>

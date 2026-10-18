@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Heebo', sans-serif;
+}
+
+body {
+    color: #21243D;
+    background-color: #fff;
+}
+
+/* Фіксована кнопка Figma (За вимогою ЛР5: position: fixed) */
+.figma-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FF6464;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: transform 0.2s;
+}
+
+.figma-fixed:hover {
+    transform: scale(1.05);
+}
+
+/* Навігація */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 27px 60px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 33px;
+}
+
+/* Hero Секція */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 856px;
+    margin: 35px auto 70px;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 44px;
+    line-height: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 23px;
+    max-width: 497px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #FF6464;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.hero-avatar .avatar-img {
+    width: 243px;
+    height: 243px;
+    border-radius: 50%;
+    background-color: #EDF7FA;
+    box-shadow: -10px 10px 0px #EDF7FA;
+    background-image: radial-gradient(#142850 15%, transparent 16%);
+    background-size: 12px 12px;
+}
+
+/* Recent Posts */
+.recent-posts {
+    background-color: #EDF7FA;
+    padding: 27px 0 32px;
+}
+
+.container {
+    max-width: 856px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.posts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.posts-header h2 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.view-all {
+    color: #00A8CC;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.posts-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.post-card {
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 24px;
+    flex: 1;
+}
+
+.post-card h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 38px;
+}
+
+.post-meta {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.post-meta span {
+    margin: 0 10px;
+}
+
+.post-card p {
+    font-size: 16px;
+    line-height: 23px;
+}
+
+/* Featured Works */
+.featured-works {
+    padding: 30px 0;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 22px;
+}
+
+.work-card {
+    display: flex;
+    gap: 18px;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.work-img {
+    width: 246px;
+    height: 180px;
+    border-radius: 6px;
+    background-color: #142850;
+    flex-shrink: 0;
+}
+
+.work-1 { background: #142850; }
+.work-2 { background: #FF6464; }
+.work-3 { background: #21243D; }
+
+.work-details h3 a {
+    font-size: 30px;
+    color: #21243D;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.work-meta {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.badge {
+    background: #142850;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 16px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.category {
+    color: #8695A4;
+    font-size: 20px;
+}
+
+.work-details p {
+    font-size: 16px;
+    line-height: 23px;
+}
+
+/* Підвал */
+.footer {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 26px;
+    font-weight: bold;
+}
+
+.socials a {
+    color: #21243D;
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .posts-grid {
+        flex-direction: column;
+    }
+    .work-card {
+        flex-direction: column;
+    }
+    .work-img {
+        width: 100%;
+    }
+}
