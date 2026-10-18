@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.planner-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 1100px;
+    padding: 25px;
+    border: 3px solid #1a1a1a;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Шапка */
+.planner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+.header-left {
+    display: flex;
+    align-items: flex-end;
+    gap: 25px;
+    flex: 1;
+}
+
+.main-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.header-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 200px;
+}
+
+.header-field label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.header-field input {
+    border: none;
+    border-bottom: 1px solid #1a1a1a;
+    outline: none;
+    padding: 2px;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.check-field {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.check-field label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* CSS Grid структура */
+.planner-grid {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 15px;
+}
+
+/* Ліва частина */
+.todo-sidebar {
+    border-right: 2px solid #1a1a1a;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-header-title {
+    text-align: right;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.section-block {
+    margin-bottom: 15px;
+}
+
+.section-block h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.todo-item input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+
+.todo-item input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    padding: 0 2px;
+}
+
+/* Дні тижня (Grid) */
+.days-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.day-box {
+    border: 1px solid #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
+    background: #fff;
+}
+
+.weekend-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.half-day {
+    min-height: 104px;
+    flex: 1;
+}
+
+.day-header {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-bottom: 1px solid #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow-down, .arrow-up {
+    font-size: 10px;
+    color: #555;
+}
+
+.day-box textarea {
+    flex: 1;
+    border: none;
+    resize: none;
+    padding: 8px;
+    outline: none;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    line-height: 24px;
+    background-image: repeating-linear-gradient(transparent, transparent 23px, #e0e0e0 24px);
+}

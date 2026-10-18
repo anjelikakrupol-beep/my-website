@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №4 - Weekly Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lab4.css">
+</head>
+<body>
+
+    <div class="planner-container">
+        
+        <!-- Шапка планера -->
+        <header class="planner-header">
+            <div class="header-left">
+                <h1 class="main-title">WEEKLY PLAN</h1>
+                <div class="header-field">
+                    <label>WEEK OF</label>
+                    <input type="text">
+                </div>
+                <div class="header-field">
+                    <label>HEALTHY HABIT</label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="check-field"><label>ROCKED IT</label> <input type="checkbox"></div>
+                <div class="check-field"><label>ROOM FOR IMPROVEMENT</label> <input type="checkbox"></div>
+            </div>
+        </header>
+
+        <!-- Основна сітка (Grid) -->
+        <main class="planner-grid">
+            
+            <!-- Ліва панель завдань -->
+            <section class="todo-sidebar">
+                <div class="todo-header-title">TO DO</div>
+
+                <div class="section-block">
+                    <h2>TOP 3 GOALS</h2>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                </div>
+
+                <div class="section-block">
+                    <h2>EVERYTHING ELSE</h2>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                </div>
+
+                <div class="section-block">
+                    <h2>NEXT WEEK</h2>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                    <div class="todo-item"><input type="checkbox"><input type="text"></div>
+                </div>
+            </section>
+
+            <!-- Дні тижня (Сітка) -->
+            <section class="days-container">
+                
+                <div class="day-box">
+                    <div class="day-header"><span class="arrow-down">▼</span> MONDAY <input type="checkbox"></div>
+                    <textarea></textarea>
+                </div>
+
+                <div class="day-box">
+                    <div class="day-header"><span class="arrow-down">▼</span> TUESDAY <input type="checkbox"></div>
+                    <textarea></textarea>
+                </div>
+
+                <div class="day-box">
+                    <div class="day-header"><span class="arrow-down">▼</span> WEDNESDAY <input type="checkbox"></div>
+                    <textarea></textarea>
+                </div>
+
+                <div class="day-box">
+                    <div class="day-header"><span class="arrow-up">▲</span> THURSDAY <input type="checkbox"></div>
+                    <textarea></textarea>
+                </div>
+
+                <div class="day-box">
+                    <div class="day-header"><span class="arrow-up">▲</span> FRIDAY <input type="checkbox"></div>
+                    <textarea></textarea>
+                </div>
+
+                <!-- Колонка з Saturday і Sunday -->
+                <div class="weekend-column">
+                    <div class="day-box half-day">
+                        <div class="day-header"><span class="arrow-up">▲</span> SATURDAY <input type="checkbox"></div>
+                        <textarea></textarea>
+                    </div>
+                    <div class="day-box half-day">
+                        <div class="day-header">SUNDAY <input type="checkbox"></div>
+                        <textarea></textarea>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
