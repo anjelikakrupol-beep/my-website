@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111827;
+    color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 16px;
+}
+
+.controls h1 {
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+#toggleBtn {
+    background: #facc15;
+    color: #111827;
+    border: none;
+    padding: 10px 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#toggleBtn:hover {
+    background: #fde047;
+    transform: scale(1.04);
+}
+
+/* =========================================================
+   ОСНОВНА СЦЕНА ТА АНІМАЦІЯ НЕБА (ЦИКЛ ДЕНЬ -> ЗАХІД -> НІЧ)
+   ========================================================= */
+.scene {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 460px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border: 3px solid #374151;
+    animation: skyCycle 18s ease-in-out infinite alternate;
+}
+
+/* Пауза всіх CSS-анімацій при натисканні кнопки */
+.scene.paused,
+.scene.paused * {
+    animation-play-state: paused !important;
+}
+
+@keyframes skyCycle {
+    0% {
+        background: linear-gradient(to bottom, #38bdf8 0%, #bae6fd 70%, #e0f2fe 100%);
+    }
+    50% {
+        background: linear-gradient(to bottom, #f97316 0%, #fb7185 55%, #fde047 100%);
+    }
+    100% {
+        background: linear-gradient(to bottom, #0f172a 0%, #1e1b4b 65%, #312e81 100%);
+    }
+}
+
+/* Сонце, що заходить за горизонт */
+.celestial-body {
+    position: absolute;
+    right: 120px;
+    top: 45px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #fef08a;
+    box-shadow: 0 0 35px #facc15;
+    animation: sunMove 18s ease-in-out infinite alternate;
+}
+
+@keyframes sunMove {
+    0% {
+        transform: translateY(0) scale(1);
+        background: #fef08a;
+    }
+    50% {
+        transform: translateY(110px) scale(1.15);
+        background: #fb923c;
+    }
+    100% {
+        transform: translateY(220px) scale(0.9);
+        background: #f8fafc;
+        box-shadow: 0 0 25px #e2e8f0;
+    }
+}
+
+/* =========================================================
+   АНІМАЦІЯ ХМАР (ПАРАЛАКС)
+   ========================================================= */
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 50px;
+    filter: blur(1px);
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.cloud-1 {
+    width: 130px;
+    height: 40px;
+    top: 50px;
+    animation: driftClouds 22s linear infinite;
+}
+.cloud-1::before { width: 55px; height: 55px; top: -25px; left: 20px; }
+.cloud-1::after  { width: 45px; height: 45px; top: -18px; right: 20px; }
+
+.cloud-2 {
+    width: 100px;
+    height: 32px;
+    top: 115px;
+    opacity: 0.7;
+    animation: driftClouds 30s linear infinite;
+    animation-delay: -10s;
+}
+.cloud-2::before { width: 42px; height: 42px; top: -20px; left: 15px; }
+
+.cloud-3 {
+    width: 150px;
+    height: 44px;
+    top: 80px;
+    opacity: 0.6;
+    animation: driftClouds 26s linear infinite;
+    animation-delay: -18s;
+}
+.cloud-3::before { width: 65px; height: 65px; top: -30px; left: 25px; }
+
+@keyframes driftClouds {
+    0% {
+        transform: translateX(950px);
+    }
+    100% {
+        transform: translateX(-200px);
+    }
+}
+
+/* =========================================================
+   ЗАДНІЙ ФОН (ГОРИ) ТА ЗЕМЛЯ (background-position)
+   ========================================================= */
+.mountains {
+    position: absolute;
+    bottom: 85px;
+    left: 0;
+    width: 200%;
+    height: 140px;
+    background:
+        linear-gradient(135deg, transparent 50%, #334155 50%) 0 0 / 180px 140px repeat-x,
+        linear-gradient(225deg, transparent 50%, #1e293b 50%) 90px 0 / 180px 140px repeat-x;
+    animation: moveMountains 25s linear infinite;
+}
+
+@keyframes moveMountains {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #15803d;
+    border-top: 8px solid #22c55e;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.08) 0px,
+        rgba(255, 255, 255, 0.08) 15px,
+        transparent 15px,
+        transparent 30px
+    );
+    background-size: 42px 42px;
+    animation: moveGround 1.2s linear infinite;
+}
+
+@keyframes moveGround {
+    0%   { background-position: 0 0; }
+    100% { background-position: -42px 0; }
+}
+
+/* =========================================================
+   АНІМАЦІЯ СПРАЙТІВ ПОКЕМОНІВ
+   ========================================================= */
+.character {
+    position: absolute;
+    bottom: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+}
+
+.sprite {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    /* Відзеркалюємо спрайт, щоб покемон біг вправо */
+    transform: scaleX(-1);
+}
+
+.shadow {
+    width: 64px;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 50%;
+    margin-top: -8px;
+}
+
+/* Пікачу: біжить попереду та підстрибує */
+.pikachu-wrapper {
+    left: 240px;
+    animation: pikachuRun 3.5s ease-in-out infinite;
+}
+
+.pikachu-sprite {
+    animation: pikachuJump 0.7s ease-in-out infinite;
+}
+
+.pikachu-wrapper .shadow {
+    animation: shadowScale 0.7s ease-in-out infinite;
+}
+
+/* Чармандер: наздоганяє позаду */
+.charmander-wrapper {
+    left: 110px;
+    animation: charmanderChase 3.5s ease-in-out infinite;
+}
+
+.charmander-sprite {
+    animation: pikachuJump 0.85s ease-in-out infinite;
+}
+
+@keyframes pikachuJump {
+    0%, 100% {
+        transform: scaleX(-1) translateY(0);
+    }
+    50% {
+        transform: scaleX(-1) translateY(-28px) rotate(-5deg);
+    }
+}
+
+@keyframes shadowScale {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(0.6);
+        opacity: 0.15;
+    }
+}
+
+@keyframes pikachuRun {
+    0%, 100% { transform: translateX(0); }
+    50%      { transform: translateX(140px); }
+}
+
+@keyframes charmanderChase {
+    0%, 100% { transform: translateX(0); }
+    50%      { transform: translateX(110px); }
+}

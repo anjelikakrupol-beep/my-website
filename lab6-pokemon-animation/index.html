@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6 — CSS Анімація Покемонів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <h1>Нічна пробіжка в регіоні Канто</h1>
+        <button id="toggleBtn" type="button">Пауза / Старт анімації</button>
+    </div>
+
+    <main class="scene" id="scene">
+        <!-- Анімоване сонце / місяць -->
+        <div class="celestial-body"></div>
+
+        <!-- Анімовані хмари (паралакс) -->
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+
+        <!-- Гори на задньому плані -->
+        <div class="mountains"></div>
+
+        <!-- Персонаж 1: Пікачу (спрайт із pokemondb.net) -->
+        <div class="character pikachu-wrapper">
+            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif"
+                 alt="Pikachu Sprite"
+                 class="sprite pikachu-sprite">
+            <div class="shadow"></div>
+        </div>
+
+        <!-- Персонаж 2: Чармандер (спрайт із pokemondb.net) -->
+        <div class="character charmander-wrapper">
+            <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif"
+                 alt="Charmander Sprite"
+                 class="sprite charmander-sprite">
+            <div class="shadow"></div>
+        </div>
+
+        <!-- Анімована трава та земля -->
+        <div class="ground"></div>
+    </main>
+
+    <script>
+        const btn = document.getElementById('toggleBtn');
+        const scene = document.getElementById('scene');
+        btn.addEventListener('click', () => {
+            scene.classList.toggle('paused');
+        });
+    </script>
+</body>
+</html>
