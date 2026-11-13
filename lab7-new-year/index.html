@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №7 — Новорічна листівка (BEM + SCSS)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <div class="snow" aria-hidden="true">
+        <span class="snow__flake snow__flake--1">❄</span>
+        <span class="snow__flake snow__flake--2">❅</span>
+        <span class="snow__flake snow__flake--3">❆</span>
+        <span class="snow__flake snow__flake--4">❄</span>
+        <span class="snow__flake snow__flake--5">❅</span>
+        <span class="snow__flake snow__flake--6">❆</span>
+    </div>
+
+    <main class="card">
+        <span class="card__badge">Лабораторна №7 • BEM &amp; SCSS</span>
+
+        <div class="tree">
+            <div class="tree__star">★</div>
+            <div class="tree__tier tree__tier--top"></div>
+            <div class="tree__tier tree__tier--middle"></div>
+            <div class="tree__tier tree__tier--bottom"></div>
+            <div class="tree__trunk"></div>
+
+            <span class="tree__ornament tree__ornament--pos1"></span>
+            <span class="tree__ornament tree__ornament--gold tree__ornament--pos2"></span>
+            <span class="tree__ornament tree__ornament--blue tree__ornament--pos3"></span>
+            <span class="tree__ornament tree__ornament--gold tree__ornament--pos4"></span>
+        </div>
+
+        <h1 class="card__title" id="greeting-title">З Новим Роком та Різдвом!</h1>
+        <p class="card__text" id="greeting-text">
+            Нехай новий рік принесе натхнення, круті проєкти, чистий код без багів та здійснення найзаповітніших мрій!
+        </p>
+
+        <button class="card__button" id="wish-btn" type="button">Отримати побажання</button>
+        <a class="card__button card__button--secondary" href="../index.html">На головну</a>
+    </main>
+
+    <script>
+        const wishes = [
+            "Нехай у новому році всі дедлайни закриваються легко, а натхнення ніколи не закінчується!",
+            "Бажаю яскравих ідей, гармонії, тепла та перемог у кожному починанні!",
+            "Нехай цей рік подарує незабутні подорожі, вірних друзів та море радості!"
+        ];
+        let idx = 0;
+        document.getElementById('wish-btn').addEventListener('click', () => {
+            idx = (idx + 1) % wishes.length;
+            document.getElementById('greeting-text').textContent = wishes[idx];
+        });
+    </script>
+</body>
+</html>
